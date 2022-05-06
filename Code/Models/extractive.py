@@ -27,7 +27,7 @@ if __name__ == "__main__":
     parser.add_argument("--sentence_count", type=int, default=3)
 
     args, _ = parser.parse_known_args()
-    
+
     def summarize(text, sumarizer, SENTENCES_COUNT):
         sentences_ = []
         doc = text
@@ -46,16 +46,24 @@ if __name__ == "__main__":
             [["recall", "precision", "f-measure"]]
         )
         return ModelDF
-    
-    
+
     df = pd.read_csv(args.data_file)
 
-    df["LexRankSummary"] = df[args.text_column].map(lambda x: summarize(x, LexRankSummarizer(), args.sentence_count))
-    df["KLSummary"] = df[args.text_column].map(lambda x: summarize(x, KLSummarizer(), args.sentence_count))
-    df["TextRankSummary"] = df[args.text_column].map(lambda x: summarize(x, TextRankSummarizer(),args.sentence_count)) 
-    df["SumBasicSummary"] = df[args.text_column].map(lambda x: summarize(x, SumBasicSummarizer(), args.sentence_count))
-    df["LsaSummary"] = df[args.text_column].map(lambda x: summarize(x, LsaSummarizer(), args.sentence_count))
-
+    df["LexRankSummary"] = df[args.text_column].map(
+        lambda x: summarize(x, LexRankSummarizer(), args.sentence_count)
+    )
+    df["KLSummary"] = df[args.text_column].map(
+        lambda x: summarize(x, KLSummarizer(), args.sentence_count)
+    )
+    df["TextRankSummary"] = df[args.text_column].map(
+        lambda x: summarize(x, TextRankSummarizer(), args.sentence_count)
+    )
+    df["SumBasicSummary"] = df[args.text_column].map(
+        lambda x: summarize(x, SumBasicSummarizer(), args.sentence_count)
+    )
+    df["LsaSummary"] = df[args.text_column].map(
+        lambda x: summarize(x, LsaSummarizer(), args.sentence_count)
+    )
 
     LexRouge = RougeScore("LexRouge", df["LexRankSummary"])
     TextRankRouge = RougeScore("TextRankRouge", df["TextRankSummary"])
@@ -65,7 +73,6 @@ if __name__ == "__main__":
 
     os.makedirs(args.output_dir)
     os.chdir(args.output_dir)
-    
 
     TextRankRouge.to_csv("TextRankRouge.csv", header=True, index=True)
     LexRouge.to_csv("LexRouge.csv", header=True, index=True)
@@ -73,5 +80,10 @@ if __name__ == "__main__":
     LsaRouge.to_csv("LsaRouge.csv", header=True, index=True)
     KLRouge.to_csv("KLRouge.csv", header=True, index=True)
 
-    df[[args.summary_column,'LexRankSummary','KLSummary','TextRankSummary','SumBasicSummary','LsaSummary']].to_csv( \
-                                                                    "Extractiveprediction.csv", index=False, header=True)    
+    df[[ args.summary_column,
+         "LexRankSummary",
+         "KLSummary",
+         "TextRankSummary",
+         "SumBasicSummary",
+         "LsaSummary",
+        ]].to_csv("Extractiveprediction.csv", index=False, header=True)
