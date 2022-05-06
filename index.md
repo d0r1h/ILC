@@ -1,7 +1,6 @@
 
-You can use the [editor on GitHub](https://github.com/d0r1h/ILC/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is supplementary webpage for paper  [ILC: Indian Legal Corpus](https://github.com/d0r1h/ILC/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### DataSet
 
@@ -18,12 +17,8 @@ train_set = pd.DataFrame(dataset['train'])
 test_set = pd.DataFrame(dataset['test'])
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
+### Models
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/d0r1h/ILC/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+[led-base-ilc](https://huggingface.co/d0r1h/led-base-ilc) is fine-tuned version of [led-base-16384](https://huggingface.co/allenai/led-base-16384) on the [ILC](https://huggingface.co/datasets/d0r1h/ILC) dataset. 
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
