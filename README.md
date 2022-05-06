@@ -5,6 +5,13 @@ This page contains the code and track my work on Indian Legal Document (ILC) sum
 
 
 
+```python
+git clone https://github.com/d0r1h/ILC.git
+cd ILC
+pip install -r requirement.txt
+```
+
+
 Summarzing using Extractive approach 
 
 ```python
