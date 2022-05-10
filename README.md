@@ -1,3 +1,10 @@
+<p align="center">
+    <br>
+    <img src="https://github.com/d0r1h/ILC/blob/main/assets/ILC_logo.png" width="300"/>
+    <br>
+<p>
+
+
 # ILC
 
 This page contains the code and track my work on Indian Legal Document (ILC) summarization. 
