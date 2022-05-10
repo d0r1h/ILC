@@ -41,8 +41,19 @@ Summarzing using Extractive approach
         --summary_column summary \
         --data_file data.csv \
         --sentence_count 3 
+```
 
+Training LED using Abstractive approach 
 
+```python
+!python Code/Models/led_summarization.py \
+        --model_name  allenai/led-base-16384 \
+        --text_column  Case \
+        --summary_column Summary    \
+        --max_input_length  8192 \
+        --max_output_length  600 \
+        --batch_size 2 num_beams 2 \
+        --output_dir output_dir_name
 ```
 
 
