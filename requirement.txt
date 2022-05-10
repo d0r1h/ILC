@@ -1,4 +1,8 @@
 sumy
 nltk
 rouge 
-
+torch 
+datasets 
+transformers
+sentencepiece
+rouge_score
