@@ -69,7 +69,7 @@ Inference on test-set using [led-base-ilc](https://huggingface.co/d0r1h/led-base
 
 | Notebook | Colab |
 | ------ | ------ |
-| BaseLine | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/d0r1h/ILC/blob/main/Code/Models/notebooks/LEDbase_inference_ilc_testset.ipynb) |
+| led-base-ilc | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/d0r1h/ILC/blob/main/Code/Models/notebooks/LEDbase_inference_ilc_testset.ipynb) |
 
 
 ## Results: 
@@ -86,5 +86,5 @@ Following results are obtained on test-set with transformer based models and ext
 | TextRank 	 |  34.54 | 18.10  | 31.11 |
 **Abstractive**
 | LedBase    | 4.31  | 1.08 | 4.11 |
-| LedIlc     | **42.24** | **23.18**  | **39.30** |
+| Led-ilc     | **42.24** | **23.18**  | **39.30** |
 
