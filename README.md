@@ -44,3 +44,22 @@ Summarzing using Extractive approach
 
 
 ```
+
+
+### Results: 
+
+Following results are on test Dataset with transformemr based models and extractive methods
+
+
+| Algorithm / model | Rouge-1 | Rouge-2 | Rouge-L|
+| ---- | ---- | ---- | ----|
+**Extractive**
+| SumBasics	 |	15.69 | 6.02   | 14.48 |
+| LSA 	     |	21.20 | 7.37  | 19.76 |
+| KLSum      |	21.40 | 10.19  | 19.66 |
+| LexRank 	 |  33.09 | 16.81  | 22.99 |  
+| TextRank 	 |  34.54 | 18.10  | 31.11 |
+**Abstractive**
+| LedBase    | 4.31  | 1.08 | 4.11 |
+| LedIlc     | **42.24** | **23.18**  | **39.30** |
+
