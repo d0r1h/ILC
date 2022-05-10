@@ -60,7 +60,8 @@ Training LED using Abstractive approach
         --summary_column Summary    \
         --max_input_length  8192 \
         --max_output_length  600 \
-        --batch_size 2 num_beams 2 \
+        --batch_size 2 \
+        --num_beams 2 \
         --output_dir output_dir_name
 ```
 
