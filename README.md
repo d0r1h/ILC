@@ -17,12 +17,20 @@
     
 
     
-# ILC
 
-This page contains the code and track my work on Indian Legal Document (ILC) summarization. 
+## DataSet
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("d0r1h/ILC")
+
+train_set = pd.DataFrame(dataset['train'])
+test_set = pd.DataFrame(dataset['test'])
+```
 
 
-
+## Code
 
 ```python
 git clone https://github.com/d0r1h/ILC.git
@@ -56,11 +64,16 @@ Training LED using Abstractive approach
         --output_dir output_dir_name
 ```
 
+Inference on test-set using [led-base-ilc](https://huggingface.co/d0r1h/led-base-ilc) model
 
-### Results: 
+| Notebook | Colab |
+| ------ | ------ |
+| BaseLine | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/d0r1h/ILC/blob/main/Code/Models/notebooks/LEDbase_inference_ilc_testset.ipynb) |
 
-Following results are on test Dataset with transformemr based models and extractive methods
 
+## Results: 
+
+Following results are obtained on test-set with transformer based models and extractive methods
 
 | Algorithm / model | Rouge-1 | Rouge-2 | Rouge-L|
 | ---- | ---- | ---- | ----|
