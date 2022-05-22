@@ -1,5 +1,5 @@
 
-This is supplementary webpage for paper  [ILC: Indian Legal Corpus](https://github.com/d0r1h/ILC/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is supplementary webpage for paper  [ILC: Indian Legal Corpus](https://github.com/d0r1h/ILC/edit/gh-pages/index.md).
 
 
 ### DataSet
@@ -22,3 +22,6 @@ test_set = pd.DataFrame(dataset['test'])
 
 [led-base-ilc](https://huggingface.co/d0r1h/led-base-ilc) is fine-tuned version of [led-base-16384](https://huggingface.co/allenai/led-base-16384) on the [ILC](https://huggingface.co/datasets/d0r1h/ILC) dataset. 
 
+### Results 
+
+![](ilc_results.png)
