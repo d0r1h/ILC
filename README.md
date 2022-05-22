@@ -20,6 +20,9 @@
 
 ## DataSet
 
+We have scraped and complied a corpus of 3k+ Indian legal judgments and their parallel summaries. 
+
+
 ```python
 from datasets import load_dataset
 
